@@ -12,6 +12,13 @@ body, h1, h2, h3, p, margin, padding {
       color: #fff;
   }
 
+  h1 {
+    text-align: center; /* Center the text horizontally */
+    color: black; /* Set the text color to black */
+    margin-top: 10%;
+    font-size: 5em; /* Adjust the font-size as needed */
+}
+
 body{
     background:#ffca0a;
     /* background: -webkit-linear-gradient(to right, #ffca0a, #ffea70, #fff8c0);
