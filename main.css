@@ -15,7 +15,7 @@ body, h1, h2, h3, p, margin, padding {
   h1 {
     text-align: center; /* Center the text horizontally */
     color: black; /* Set the text color to black */
-    margin-top: 10%;
+    /* margin-top: 10%; */
     font-size: 5em; /* Adjust the font-size as needed */
 }
 
