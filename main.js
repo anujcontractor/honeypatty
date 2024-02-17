@@ -73,29 +73,54 @@ let leaveAndRemoveLocalStream = async () => {
     document.getElementById('video-streams').innerHTML = ''
 }
 
+// let toggleMic = async (e) => {
+//     if (localTracks[0].muted){
+//         await localTracks[0].setMuted(false)
+//         e.target.innerText = 'Mic on'
+//         e.target.style.backgroundColor = 'cadetblue'
+//     }else{
+//         await localTracks[0].setMuted(true)
+//         e.target.innerText = 'Mic off'
+//         e.target.style.backgroundColor = '#EE4B2B'
+//     }
+// }
+
+// let toggleCamera = async (e) => {
+//     if(localTracks[1].muted){
+//         await localTracks[1].setMuted(false)
+//         e.target.innerText = 'Camera on'
+//         e.target.style.backgroundColor = 'cadetblue'
+//     }else{
+//         await localTracks[1].setMuted(true)
+//         e.target.innerText = 'Camera off'
+//         e.target.style.backgroundColor = '#EE4B2B'
+//     }
+// }
+
 let toggleMic = async (e) => {
     if (localTracks[0].muted){
-        await localTracks[0].setMuted(false)
-        e.target.innerText = 'Mic on'
-        e.target.style.backgroundColor = 'cadetblue'
-    }else{
-        await localTracks[0].setMuted(true)
-        e.target.innerText = 'Mic off'
-        e.target.style.backgroundColor = '#EE4B2B'
+        await localTracks[0].setMuted(false);
+        document.getElementById('mic-icon').src = 'mic.png';
+        e.target.style.backgroundColor = 'red';
+    } else {
+        await localTracks[0].setMuted(true);
+        document.getElementById('mic-icon').src = 'mic.png';
+        e.target.style.backgroundColor = '#EE4B2B';
     }
-}
+};
 
 let toggleCamera = async (e) => {
     if(localTracks[1].muted){
-        await localTracks[1].setMuted(false)
-        e.target.innerText = 'Camera on'
-        e.target.style.backgroundColor = 'cadetblue'
-    }else{
-        await localTracks[1].setMuted(true)
-        e.target.innerText = 'Camera off'
-        e.target.style.backgroundColor = '#EE4B2B'
+        await localTracks[1].setMuted(false);
+        document.getElementById('camera-icon').src = 'camera.png';
+        e.target.style.backgroundColor = 'red';
+    } else {
+        await localTracks[1].setMuted(true);
+        document.getElementById('camera-icon').src = 'camera.png';
+        e.target.style.backgroundColor = '#EE4B2B';
     }
-}
+};
+
 
 document.getElementById('join-btn').addEventListener('click', joinStream)
 document.getElementById('leave-btn').addEventListener('click', leaveAndRemoveLocalStream)

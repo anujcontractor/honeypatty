@@ -1,10 +1,24 @@
+body, h1, h2, h3, p, margin, padding {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    box-sizing: border-box;
+  }
+  
+  body{
+      background-color: #ffca0a;
+      color: #fff;
+  }
+
 body{
-    background:#0F2027;
-    background:-webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027) ;
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background:#ffca0a;
+    /* background: -webkit-linear-gradient(to right, #ffca0a, #ffea70, #fff8c0);
+background: linear-gradient(to right, #ffca0a, #ffea70, #fff8c0); */
 }
 
-#join-btn{
+/* #join-btn{
     position: fixed;
     top:50%;
     left:50%;
@@ -12,12 +26,32 @@ body{
     margin-left:-100px;
     font-size:18px;
     padding:20px 40px;
+} */
+
+#join-btn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    width: auto; /* Remove width to let it adjust based on content */
+    border: none;
+    border-radius: 50px; /* Make the button rounder */
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #ff4500;
+    transition: background-color 0.3s ease;
+}
+
+#join-btn:hover {
+    background-color: #e63c00;
 }
 
 #video-streams{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    height: 90vh;
+    height: calc(90vh - 50px);
     width: 1400px;
     margin:0 auto;
 }
@@ -33,21 +67,45 @@ body{
     width: 100%;
 }
 
-button{
-    border:none;
-    background-color: cadetblue;
-    color:#fff;
-    padding:10px 20px;
-    font-size:16px;
-    margin:2px;
+button {
+    border: none;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2px;
     cursor: pointer;
+    border-radius: 20px; /* Make the button rounder */
 }
 
-#stream-controls{
+
+#stream-controls {
     display: none;
     justify-content: center;
-    margin-top:0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 70px; /* Adjusted margin to prevent overlap with the footer */
 }
+
+#camera-btn img{
+        height: 30px;
+        width: 30px;
+}
+#mic-btn img{
+        height: 30px;
+        width: 30px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
 
 @media screen and (max-width:1400px){
     #video-streams{
