@@ -1,5 +1,5 @@
 const APP_ID = "2ca4399fac974d1b82d8a38939b68326"
-const TOKEN = "007eJxTYNj+9mOV6Yy5X945OrHzxHAZLvD23r1m88Pkyr+SGTeO6corMBglJ5oYW1qmJSZbmpukGCZZGKVYJBpbWBpbJplZGBuZ2d+4kNoQyMhw5o8EAyMUgvhsDCmluQWlmQwMAMfWISI="
+const TOKEN = "007eJxTYPite5c9Uc6Irdv6WXG0hs6eX+c8Qx0uLxOY13a5tfj07ecKDEbJiSbGlpZpicmW5iYphkkWRikWicYWlsaWSWYWxkZmdmyXUhsCGRkqWqRYGRkgEMRnY0gpzS0ozWRgAABtRh+H"
 const CHANNEL = "dumpui"
 
 const client = AgoraRTC.createClient({mode:'rtc', codec:'vp8'})
